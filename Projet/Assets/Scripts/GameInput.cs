@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameInput : MonoBehaviour
 {
     private PlayerInputActions playerInputActions;
-
+    
     private void Awake()
     {
         playerInputActions = new PlayerInputActions();
@@ -15,8 +15,13 @@ public class GameInput : MonoBehaviour
     {
         Vector2 inputVector = playerInputActions.Player.Move.ReadValue<Vector2>();
 
-        inputVector = inputVector.normalized;
-
         return inputVector;
+    }    
+    public float GetRunningState()
+    {
+        float run = playerInputActions.Player.Run.ReadValue<float>();
+
+        return run;
     }
+
 }
