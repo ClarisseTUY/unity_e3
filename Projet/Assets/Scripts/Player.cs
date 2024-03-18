@@ -14,28 +14,38 @@ public class Player : MonoBehaviour
 
     private bool isWalking;
     private bool isRunning;
+    private bool isJumping;
+    private bool isSitting = false;
 
 
     private void Update()
     {
+        Sit();
+        OnRun();
+        OnWalk();
+
+    }
+    private void OnWalk()
+    {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();
-        float runState = gameInput.GetRunningState();
 
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
 
-        OnRun(runState);
+        transform.position += moveDir * moveSpeed * runSpeed * Time.deltaTime;
 
-        transform.position += moveDir * moveSpeed * runSpeed* Time.deltaTime;
-        
         isWalking = moveDir != Vector3.zero;
 
         float rotateSpeed = 10f;
-        transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime*rotateSpeed);
+        transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
 
+        if(isWalking && isSitting)
+        {
+            isSitting = false;
+        }
     }
-
-    private void OnRun(float runState)
+    private void OnRun()
     {
+        float runState = gameInput.GetRunningState();
         isRunning = runState > 0;
 
         if (isRunning)
@@ -48,6 +58,14 @@ public class Player : MonoBehaviour
         }
 
     }
+
+    private void Sit() { 
+        bool sit = gameInput.GetSittingState();
+        if(sit)
+        {
+            isSitting = !isSitting;
+        }
+    }
     public bool IsWalking()
     {
         return isWalking;
@@ -56,5 +74,13 @@ public class Player : MonoBehaviour
     public bool IsRunning()
     {
         return isRunning;
+    }
+    public bool IsJumping()
+    {
+        return isJumping;
+    }
+    public bool IsSitting()
+    {
+        return isSitting;
     }
 }

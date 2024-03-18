@@ -24,4 +24,11 @@ public class GameInput : MonoBehaviour
         return run;
     }
 
+    public bool GetSittingState()
+    {
+        bool sit = playerInputActions.Player.Sit.triggered;
+
+        return sit;
+    }
+
 }
