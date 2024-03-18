@@ -17,6 +17,8 @@ public class GameInput : MonoBehaviour
 
         return inputVector;
     }    
+
+
     public float GetRunningState()
     {
         float run = playerInputActions.Player.Run.ReadValue<float>();

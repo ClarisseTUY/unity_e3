@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     private bool isRunning;
     private bool isJumping;
     private bool isSitting = false;
+    private bool isMovingRight;
+    private bool isMovingLeft;
 
 
     private void Update()
@@ -23,7 +25,7 @@ public class Player : MonoBehaviour
         Sit();
         OnRun();
         OnWalk();
-
+        UpdateMovementDirection();
     }
     private void OnWalk()
     {
@@ -43,6 +45,22 @@ public class Player : MonoBehaviour
             isSitting = false;
         }
     }
+    private void UpdateMovementDirection()
+    {
+        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
+        isMovingRight = inputVector.x > 0;
+        isMovingLeft = inputVector.x < 0;
+    }
+    public bool IsMovingRight()
+    {
+        return isMovingRight;
+    }
+
+    public bool IsMovingLeft()
+    {
+        return isMovingLeft;
+    }
+
     private void OnRun()
     {
         float runState = gameInput.GetRunningState();
