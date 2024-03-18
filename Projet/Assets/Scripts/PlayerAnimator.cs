@@ -30,6 +30,6 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetBool(IS_SITTING, player.IsSitting());
         animator.SetBool(IS_ROLLING, player.IsRolling());
         animator.SetBool(IS_MOVING_LEFT, player.IsMovingLeft());
-        animator.SetBool(IS_MOVING_RIGHT, player.IsMovingRight()); ;
+        animator.SetBool(IS_MOVING_RIGHT, player.IsMovingRight()); 
     }
 }
