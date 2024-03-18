@@ -32,6 +32,12 @@ public class GameInput : MonoBehaviour
 
         return sit;
     }
+    public float GetRollingState()
+    {
+        float roll = playerInputActions.Player.Roll.ReadValue<float>();
+
+        return roll;
+    }
 
     public float GetJumpingState()
     {

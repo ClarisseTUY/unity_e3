@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     private bool isRunning;
     private bool isJumping;
     private bool isSitting = false;
+    private bool isRolling = false;
     private bool isMovingRight;
     private bool isMovingLeft;
 
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Sit();
+        Roll();
         OnRun();
         OnWalk();
         OnJump();   
@@ -90,6 +92,12 @@ public class Player : MonoBehaviour
             isSitting = !isSitting;
         }
     }
+
+    private void Roll() {
+        float rollState = gameInput.GetRollingState();
+        isRolling = rollState > 0;
+    }
+
     public bool IsWalking()
     {
         return isWalking;
@@ -106,5 +114,9 @@ public class Player : MonoBehaviour
     public bool IsSitting()
     {
         return isSitting;
+    }    
+    public bool IsRolling()
+    {
+        return isRolling;
     }
 }
