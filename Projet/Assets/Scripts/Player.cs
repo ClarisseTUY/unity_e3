@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float runSpeed = 1f;
+    private float runSpeed = 1f;
     [SerializeField] private GameInput gameInput;   
 
     private bool isWalking;
