@@ -33,4 +33,11 @@ public class GameInput : MonoBehaviour
         return sit;
     }
 
+    public float GetJumpingState()
+    {
+        float jump = playerInputActions.Player.Jump.ReadValue<float>();
+
+        return jump;
+    }
+
 }

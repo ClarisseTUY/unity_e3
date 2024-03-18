@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
         Sit();
         OnRun();
         OnWalk();
+        OnJump();   
         UpdateMovementDirection();
     }
     private void OnWalk()
@@ -76,6 +77,11 @@ public class Player : MonoBehaviour
         }
 
     }
+    private void OnJump()
+    {
+        float jumpState = gameInput.GetJumpingState();
+        isJumping = jumpState > 0;
+    }
 
     private void Sit() { 
         bool sit = gameInput.GetSittingState();
@@ -87,7 +93,7 @@ public class Player : MonoBehaviour
     public bool IsWalking()
     {
         return isWalking;
-    }
+    } 
 
     public bool IsRunning()
     {
