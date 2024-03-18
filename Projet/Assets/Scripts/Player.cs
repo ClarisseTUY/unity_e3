@@ -19,30 +19,31 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();
+        float runState = gameInput.GetRunningState();
 
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
 
-        OnRun();
+        OnRun(runState);
 
         transform.position += moveDir * moveSpeed * runSpeed* Time.deltaTime;
         
         isWalking = moveDir != Vector3.zero;
 
         float rotateSpeed = 10f;
-        transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
+        transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime*rotateSpeed);
 
     }
 
-    private void OnRun()
+    private void OnRun(float runState)
     {
-        if (gameInput.GetRunningState() > 0)
+        isRunning = runState > 0;
+
+        if (isRunning)
         {
-            isRunning = true;
             runSpeed = 1.5f;
         }
         else
         {
-            isRunning = false;
             runSpeed = 1f;
         }
 
