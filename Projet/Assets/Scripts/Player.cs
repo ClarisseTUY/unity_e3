@@ -10,7 +10,9 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 7f;
     private float runSpeed = 1f;
-    [SerializeField] private GameInput gameInput;   
+    [SerializeField] private GameInput gameInput;
+
+    [SerializeField] private Transform cameraTransform;
 
     private bool isWalking;
     private bool isRunning;
@@ -27,14 +29,15 @@ public class Player : MonoBehaviour
         Roll();
         OnRun();
         OnWalk();
-        OnJump();   
-        UpdateMovementDirection();
+        OnJump();
     }
     private void OnWalk()
     {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
+        moveDir = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * moveDir;
+        moveDir.Normalize();
 
         transform.position += moveDir * moveSpeed * runSpeed * Time.deltaTime;
 
@@ -47,12 +50,7 @@ public class Player : MonoBehaviour
         {
             isSitting = false;
         }
-    }
-    private void UpdateMovementDirection()
-    {
-        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
-        isMovingRight = inputVector.x > 0;
-        isMovingLeft = inputVector.x < 0;
+        
     }
     public bool IsMovingRight()
     {
@@ -118,5 +116,17 @@ public class Player : MonoBehaviour
     public bool IsRolling()
     {
         return isRolling;
+    }
+
+    private void OnApplicationFocus(bool focus)
+    {
+        if (focus)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }
