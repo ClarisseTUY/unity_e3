@@ -9,6 +9,7 @@ Library: C:\Users\Clarisse\Documents\GitHub\unity_e3\Projet\Temp\BurstOutput\Dat
 --target-framework=NetFramework
 --assembly-defines=UnityEngine;
 --assembly-defines=Assembly-CSharp;
+--assembly-defines=Unity.XR.Management;
 --assembly-defines=Unity.VisualEffectGraph.Runtime;
 --assembly-defines=Unity.RenderPipelines.Core.Runtime;
 --assembly-defines=Unity.Postprocessing.Runtime;
@@ -89,6 +90,7 @@ Library: C:\Users\Clarisse\Documents\GitHub\unity_e3\Projet\Temp\BurstOutput\Dat
 --target-framework=NetFramework
 --assembly-defines=UnityEngine;
 --assembly-defines=Assembly-CSharp;
+--assembly-defines=Unity.XR.Management;
 --assembly-defines=Unity.VisualEffectGraph.Runtime;
 --assembly-defines=Unity.RenderPipelines.Core.Runtime;
 --assembly-defines=Unity.Postprocessing.Runtime;
