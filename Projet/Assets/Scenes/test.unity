@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 3394.5112, g: 3417.0786, b: 2828.5354, a: 1}
+  m_IndirectSpecularColor: {r: 5395.6245, g: 3510.0972, b: 2230.1562, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -949,6 +949,32 @@ MonoBehaviour:
   waveform: 0
   vectorscope: 0
   debugOverlay: 10
+--- !u!1 &741125829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100042, guid: 0962bdca27eaca34aaa15f7fdf608faf, type: 3}
+  m_PrefabInstance: {fileID: 2109048836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &741125830 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 0962bdca27eaca34aaa15f7fdf608faf, type: 3}
+  m_PrefabInstance: {fileID: 2109048836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &741125832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741125829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5899d23ec53b10543a039f3deb2b3aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  animator: {fileID: 741125830}
+  runAnimation: {fileID: 7400000, guid: dd7f7570f26fc4e4aab4c4c2fc42fda5, type: 3}
+  idleAnimation: {fileID: 7400000, guid: 7419c06bc8205ac4c85a55debfadae62, type: 3}
 --- !u!1 &820445865
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,7 +1008,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: e09244f8c1ae2a44fbae6ff14569e2a2, type: 2}
+  sharedProfile: {fileID: 11400000, guid: f13c3ea32f3694eabb3136cc156cd8a7, type: 2}
 --- !u!4 &820445867
 Transform:
   m_ObjectHideFlags: 0
@@ -2991,10 +3017,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 0962bdca27eaca34aaa15f7fdf608faf, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 0962bdca27eaca34aaa15f7fdf608faf, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cb926af642c6e71468f6001b6794df40, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100042, guid: 0962bdca27eaca34aaa15f7fdf608faf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 741125832}
   m_SourcePrefab: {fileID: 100100000, guid: 0962bdca27eaca34aaa15f7fdf608faf, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
