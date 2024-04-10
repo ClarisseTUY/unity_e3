@@ -4,7 +4,7 @@ using TMPro;
 public class ItemCollector : MonoBehaviour
 {
     public TextMeshProUGUI messageText; // Référence au texte pour afficher le message au joueur
-    public float messageDuration = 8f; // Durée d'affichage du message en secondes
+    public float messageDuration = 12f; // Durée d'affichage du message en secondes
 
     private void Start()
     {
