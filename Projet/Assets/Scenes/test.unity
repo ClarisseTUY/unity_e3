@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 5897.8237, g: 5384.421, b: 4535.2324, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -379,6 +379,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Livre Magique
   messageText: {fileID: 1245657891}
+--- !u!114 &226122353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226122347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d9bb55ea11b8ac44963667545eb7681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatSpeed: 2
+  floatHeight: 0.2
 --- !u!1 &316873699
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,15 +632,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4520801761259555532, guid: 32a5bab1f34cb2f488603cc1f415eb92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.989
+      value: 4.99
       objectReference: {fileID: 0}
     - target: {fileID: 4520801761259555532, guid: 32a5bab1f34cb2f488603cc1f415eb92, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.606
+      value: 0.674
       objectReference: {fileID: 0}
     - target: {fileID: 4520801761259555532, guid: 32a5bab1f34cb2f488603cc1f415eb92, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30.05
+      value: 30.074
       objectReference: {fileID: 0}
     - target: {fileID: 4520801761259555532, guid: 32a5bab1f34cb2f488603cc1f415eb92, type: 3}
       propertyPath: m_LocalRotation.w
@@ -663,6 +677,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2303205409579412723, guid: 32a5bab1f34cb2f488603cc1f415eb92, type: 3}
       insertIndex: -1
       addedObject: {fileID: 226122348}
+    - targetCorrespondingSourceObject: {fileID: 2303205409579412723, guid: 32a5bab1f34cb2f488603cc1f415eb92, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 226122353}
   m_SourcePrefab: {fileID: 100100000, guid: 32a5bab1f34cb2f488603cc1f415eb92, type: 3}
 --- !u!1 &703770256
 GameObject:
