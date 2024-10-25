@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 109.50331, g: 88.59296, b: 61.46532, a: 1}
+  m_IndirectSpecularColor: {r: 27.033047, g: 11.082458, b: 2.688557, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 9000
+  m_Intensity: 10700.694
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -512,13 +512,13 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 9000
+  m_Intensity: 10700.694
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -555,7 +555,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 3186.4202
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 1.02e-43, y: 2.1e-44, z: 1.254e-41, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -570,7 +570,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156972771}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.99646854, y: 0.0034411657, z: -0.065661326, w: 0.05222272}
+  m_LocalRotation: {x: 0.99783605, y: -0.0000000028740867, z: -0.06575144, w: -0.0000000436168}
   m_LocalPosition: {x: -13.6, y: 62.3, z: 73.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1561,7 +1561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0665ad7c123f7e649ba547415d6e1123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTime: 17.6
+  currentTime: 18
   timeSpeed: 1
   currentTimeString: 
   sunLight: {fileID: 156972773}
@@ -1571,26 +1571,105 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 0.0066833496
+      value: 0.003753662
+      inSlope: 3.1598866
+      outSlope: 3.1598866
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.17131035
+      value: 0.5239563
+      inSlope: 4.0045657
+      outSlope: 4.0045657
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5251713
+      value: 2.2399144
+      inSlope: -0.122274876
+      outSlope: -0.122274876
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8647096
+      value: 0.510376
+      inSlope: -4.431881
+      outSlope: -4.431881
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      value: 0.00033569336
+      inSlope: -3.769967
+      outSlope: -3.769967
       tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  lightTemperatureCurse:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0050964355
+      value: 0.0053042024
+      inSlope: 3.5704272
+      outSlope: 3.5704272
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.15483855
+      value: 0.5399475
+      inSlope: 2.4493988
+      outSlope: 2.4493988
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.50116706
+      value: 1
+      inSlope: -0.6833857
+      outSlope: -0.6833857
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7693859
+      value: 0.27711228
+      inSlope: -1.8960373
+      outSlope: -1.8960373
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.010437
+      value: 0.0126953125
+      inSlope: -1.096933
+      outSlope: -1.096933
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isDay: 0
 --- !u!1 &820445865
 GameObject:
   m_ObjectHideFlags: 0
