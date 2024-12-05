@@ -16,7 +16,7 @@ public class WolfInteraction : MonoBehaviour
     public TMP_Text alertText;
 
     [SerializeField] private Transform player; // Le renard (joueur)
-    [SerializeField] private float attackRange = 4f; // Distance pour attaquer
+    [SerializeField] private float attackRange = 5f; // Distance pour attaquer
     [SerializeField] private float moveSpeed = 5f; // Vitesse du loup
     [SerializeField] private float returnSpeed = 3f; // Vitesse de retour à la position initiale
 
