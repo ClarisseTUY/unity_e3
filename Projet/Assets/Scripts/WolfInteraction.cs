@@ -15,8 +15,12 @@ public class WolfInteraction : MonoBehaviour
     public GameObject wolfAlert;
     public TMP_Text alertText;
 
+    [SerializeField] private LayerMask WhatIsGround;
+    [SerializeField] private AnimationCurve animCurve;
+    [SerializeField] private float time;
+
     [SerializeField] private Transform player; // Le renard (joueur)
-    [SerializeField] private float attackRange = 5f; // Distance pour attaquer
+    [SerializeField] private float attackRange = 3f; // Distance pour attaquer
     [SerializeField] private float moveSpeed = 5f; // Vitesse du loup
     [SerializeField] private float returnSpeed = 3f; // Vitesse de retour à la position initiale
 
@@ -25,17 +29,22 @@ public class WolfInteraction : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Start");
+        isStatic = true;
         // Sauvegarde la position initiale du loup
+
         initialPosition = transform.position;
     }
 
     void Update()
     {
+        SurfaceAlignment();
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
         // Gestion de l'alerte visuelle
         if (playerInRange)
         {
+            Debug.Log("Player in range");
             wolfAlert.SetActive(true);
             isStatic = false;
             isAttacking = false;
@@ -44,6 +53,7 @@ public class WolfInteraction : MonoBehaviour
         }
         else
         {
+            Debug.Log("Player not in range");
             wolfAlert.SetActive(false);
             isAttacking = false;
             isChasing = false;
@@ -54,6 +64,7 @@ public class WolfInteraction : MonoBehaviour
         if (distanceToPlayer <= attackRange)
         {
             // Si le joueur est assez proche, le loup attaque
+            Debug.Log("disntance in range -> attck");
             isAttacking = true;
             isChasing = false;
             isReturningToPosition = false;
@@ -78,7 +89,18 @@ public class WolfInteraction : MonoBehaviour
 
 
     }
+    private void SurfaceAlignment()
+    {
+        Ray ray = new Ray(transform.position, -transform.up);
+        RaycastHit info = new RaycastHit();
+        Quaternion RotationRef = Quaternion.Euler(0, 0, 0);
 
+        if (Physics.Raycast(ray, out info, WhatIsGround))
+        {
+            RotationRef = Quaternion.Lerp(transform.rotation, Quaternion.FromToRotation(Vector3.up, info.normal), animCurve.Evaluate(time));
+            transform.rotation = Quaternion.Euler(RotationRef.eulerAngles.x, transform.eulerAngles.y, RotationRef.eulerAngles.z);
+        }
+    }
     private void ChasePlayer()
     {
         // Déplacement vers la position du joueur
@@ -87,6 +109,7 @@ public class WolfInteraction : MonoBehaviour
 
         // Orientation du loup vers le joueur
         transform.LookAt(new Vector3(player.position.x, transform.position.y, player.position.z));
+        Debug.Log("poursuite");
     }
 
     private void StopAndAttack()

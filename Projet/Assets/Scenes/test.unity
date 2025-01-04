@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 731.6832, g: 800.52405, b: 857.46497, a: 1}
+  m_IndirectSpecularColor: {r: 742.2337, g: 809.06555, b: 862.0353, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1171,6 +1171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: magic book
       objectReference: {fileID: 0}
+    - target: {fileID: 2303205409579412723, guid: 32a5bab1f34cb2f488603cc1f415eb92, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4520801761259555532, guid: 32a5bab1f34cb2f488603cc1f415eb92, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.811662
@@ -1641,7 +1645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 7.9
-  timeSpeed: 0.5
+  timeSpeed: 0.25
   currentTimeString: 
   sunLight: {fileID: 156972773}
   sunPosition: 7.54
@@ -2124,9 +2128,37 @@ MonoBehaviour:
   isAttacking: 0
   wolfAlert: {fileID: 1173906306}
   alertText: {fileID: 1418393383}
+  WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  time: 0.25
   player: {fileID: 2016716322}
-  attackRange: 5
-  moveSpeed: 5
+  attackRange: 4.5
+  moveSpeed: 7
   returnSpeed: 3
 --- !u!114 &957367174
 MonoBehaviour:
@@ -2360,6 +2392,10 @@ PrefabInstance:
     - target: {fileID: 100006, guid: 5e76989194570e246acc05a8d2697af2, type: 3}
       propertyPath: m_Name
       value: Red_Bush
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 5e76989194570e246acc05a8d2697af2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 5e76989194570e246acc05a8d2697af2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2781,6 +2817,10 @@ PrefabInstance:
     - target: {fileID: 6258991218409019183, guid: e4f26a2795077c749a9c01f2c33c797d, type: 3}
       propertyPath: m_Name
       value: SM_campfire_001_AmbienceFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258991218409019183, guid: e4f26a2795077c749a9c01f2c33c797d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6744061236805062037, guid: e4f26a2795077c749a9c01f2c33c797d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8017,7 +8057,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Attention au gros loup wsh
+  m_text: Attention au loup !
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
