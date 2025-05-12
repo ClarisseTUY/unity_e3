@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2149.0134, g: 2288.5042, b: 2389.1897, a: 1}
+  m_IndirectSpecularColor: {r: 1768.281, g: 1883.3816, b: 1966.1643, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1074,7 +1074,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198027118}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
   m_Name: 
@@ -9894,8 +9894,8 @@ MonoBehaviour:
   m_Camera: {fileID: 1819489646}
   m_OriginBaseGameObject: {fileID: 1573508651}
   m_CameraFloorOffsetObject: {fileID: 1695055683}
-  m_RequestedTrackingOriginMode: 2
-  m_CameraYOffset: 0
+  m_RequestedTrackingOriginMode: 1
+  m_CameraYOffset: 0.5
 --- !u!4 &1573508654
 Transform:
   m_ObjectHideFlags: 0
@@ -12024,7 +12024,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132331564}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
   m_Name: 
