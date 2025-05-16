@@ -21,6 +21,6 @@ public class RabbitInHand : MonoBehaviour
 
     public void RabbitDeath(ActivateEventArgs arg)
     {
-        rabbitInHand.SetTrigger("death");
+        rabbitInHand.SetTrigger("Death");
     }
 }
