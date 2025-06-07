@@ -19,12 +19,14 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\n\t'RABBIT_ Neck1' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 0
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -82,7 +84,137 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: RABBIT@hop(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0.0000011043121, z: 0.0000011043121, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RABBIT_
+      parentName: RABBIT@hop(Clone)
+      position: {x: -0, y: 0.14139952, z: -0.10214681}
+      rotation: {x: -0.10277646, y: 0.102776416, z: 0.69959724, w: 0.69959825}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RABBIT_ Pelvis
+      parentName: RABBIT_
+      position: {x: -0.1991323, y: 0.00000014901161, z: 0.22324567}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: RABBIT_ Spine
+      parentName: RABBIT_ Pelvis
+      position: {x: -0.03862442, y: 0.027452687, z: -0.000000079797175}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RABBIT_ Spine1
+      parentName: RABBIT_ Spine
+      position: {x: -0.07007644, y: -0.000049819944, z: -1.3727913e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: RABBIT_ Neck
+      parentName: RABBIT_ Spine1
+      position: {x: -0.07004782, y: -0.000045070647, z: -1.2496457e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RABBIT_ Neck1
+      parentName: RABBIT_ Neck
+      position: {x: -0.05675497, y: -0.000047016143, z: -1.200715e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RABBIT_ Head
+      parentName: RABBIT_ Neck1
+      position: {x: -0.060323562, y: 0.000000009536743, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: RABBIT_ Queue de cheval 1
+      parentName: RABBIT_ Head
+      position: {x: -0.047135275, y: -0.00552907, z: 0.02051656}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: RABBIT_ Queue de cheval 2
+      parentName: RABBIT_ Head
+      position: {x: -0.047135312, y: -0.0055289743, z: -0.020516584}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: RABBIT_ L Clavicle
+      parentName: RABBIT_ Neck
+      position: {x: -0.0012572765, y: -0.013028393, z: 0.003456442}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: -0.7071068, w: 0.000000030908623}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RABBIT_ L UpperArm
+      parentName: RABBIT_ L Clavicle
+      position: {x: -0.048669003, y: 0, z: 0.0000000047683715}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: RABBIT_ L Forearm
+      parentName: RABBIT_ L UpperArm
+      position: {x: -0.06426498, y: 0, z: -0.0000000047683715}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: RABBIT_ L Hand
+      parentName: RABBIT_ L Forearm
+      position: {x: -0.06172657, y: -0.000000038146972, z: 0.000000009536743}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: RABBIT_ R Clavicle
+      parentName: RABBIT_ Neck
+      position: {x: -0.0012572765, y: -0.013028393, z: -0.003456514}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: 0.7071068, w: -0.000000030908623}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: RABBIT_ R UpperArm
+      parentName: RABBIT_ R Clavicle
+      position: {x: -0.048668995, y: 0, z: -0.000000011920928}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000002}
+    - name: RABBIT_ R Forearm
+      parentName: RABBIT_ R UpperArm
+      position: {x: -0.064264975, y: -0.000000009536743, z: 0.000000009536743}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+    - name: RABBIT_ R Hand
+      parentName: RABBIT_ R Forearm
+      position: {x: -0.06172657, y: 0.0000000023841857, z: -0.0000000047683715}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: RABBIT_ L Thigh
+      parentName: RABBIT_ Spine
+      position: {x: 0.045298617, y: -0.013911877, z: 0.03866348}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: RABBIT_ L Calf
+      parentName: RABBIT_ L Thigh
+      position: {x: -0.0819532, y: 0.0000000047683715, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: RABBIT_ L Foot
+      parentName: RABBIT_ L Calf
+      position: {x: -0.0745234, y: -0.000000009536743, z: -0.000000019073486}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: RABBIT_ L Toe0
+      parentName: RABBIT_ L Foot
+      position: {x: -0.02301673, y: 0.0358693, z: 0.0000000047683715}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+    - name: RABBIT_ R Thigh
+      parentName: RABBIT_ Spine
+      position: {x: 0.04529849, y: -0.013911571, z: -0.03866356}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1}
+    - name: RABBIT_ R Calf
+      parentName: RABBIT_ R Thigh
+      position: {x: -0.08195318, y: -0.0000000047683715, z: 0.000000009536743}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: RABBIT_ R Foot
+      parentName: RABBIT_ R Calf
+      position: {x: -0.07452338, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+    - name: RABBIT_ R Toe0
+      parentName: RABBIT_ R Foot
+      position: {x: -0.02301673, y: 0.03586929, z: 0.000000009536743}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 1, y: 1, z: 1.0000001}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -92,14 +224,14 @@ ModelImporter:
     feetSpacing: 0
     globalScale: 0.01
     rootMotionBoneName: 
-    hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasTranslationDoF: 1
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 1
+  animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   importBlendShapeDeformPercent: 0
   remapMaterialsIfMaterialImportModeIsNone: 1
