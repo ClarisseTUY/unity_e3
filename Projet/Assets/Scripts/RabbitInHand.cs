@@ -26,25 +26,19 @@ public class RabbitInHand : MonoBehaviour
 
         rabbitInHand.SetTrigger("Death");
 
-        // Si une main tient le lapin
         if (grabbable.isSelected)
         {
-            // Obtenir l'interactor qui tient l'objet (main ou socket)
             IXRSelectInteractor interactor = grabbable.firstInteractorSelecting;
             XRInteractionManager interactionManager = grabbable.interactionManager;
 
-            // 1. Forcer le release
             interactionManager.SelectExit(interactor, grabbable);
 
-            // 2. Changer le point d'attache
             grabbable.attachTransform = deathAttachPoint;
 
-            // 3. Forcer la main à reprendre
             interactionManager.SelectEnter(interactor, grabbable);
         }
         else
         {
-            // Si pas tenu, juste changer l’attach point
             grabbable.attachTransform = deathAttachPoint;
         }
     }
