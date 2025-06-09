@@ -17,6 +17,9 @@ public class RabbitInHand : MonoBehaviour
         grabbable = GetComponent<XRGrabInteractable>();
         grabbable.attachTransform = attachPoint;
         grabbable.activated.AddListener(RabbitDeath);
+        grabbable.selectEntered.AddListener(OnGrabbed);
+        grabbable.selectExited.AddListener(OnReleased);
+
     }
 
     public void RabbitDeath(ActivateEventArgs arg)
@@ -24,7 +27,7 @@ public class RabbitInHand : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
-        rabbitInHand.SetTrigger("Death");
+        rabbitInHand.SetBool("Dead", true);
 
         if (grabbable.isSelected)
         {
@@ -42,4 +45,15 @@ public class RabbitInHand : MonoBehaviour
             grabbable.attachTransform = deathAttachPoint;
         }
     }
+    private void OnGrabbed(SelectEnterEventArgs arg)
+    {
+        rabbitInHand.SetBool("inHand", true);
+    }
+
+    private void OnReleased(SelectExitEventArgs arg)
+    {
+        rabbitInHand.SetBool("inHand", false);
+        rabbitInHand.SetBool("isWalking", true);
+    }
+
 }

@@ -14,23 +14,28 @@ public class RabbitZoneMove : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        isWalking = Random.value > 0.5f;
         PickNewState();
+        timer += Random.Range(0f, walkDuration + idleDuration);
     }
 
     void Update()
     {
-        timer -= Time.deltaTime;
-
-        if (timer <= 0f)
+        if (!animator.GetBool("Dead") && !animator.GetBool("inHand"))
         {
-            isWalking = !isWalking;
-            PickNewState();
-        }
+            timer -= Time.deltaTime;
 
-        if (isWalking)
-        {
-            transform.Translate(direction * speed * Time.deltaTime, Space.World);
-            transform.forward = direction;
+            if (timer <= 0f)
+            {
+                isWalking = !isWalking;
+                PickNewState();
+            }
+
+            if (isWalking)
+            {
+                transform.Translate(direction * speed * Time.deltaTime, Space.World);
+                transform.forward = direction;
+            }
         }
     }
 
@@ -40,10 +45,10 @@ public class RabbitZoneMove : MonoBehaviour
 
         if (isWalking)
         {
-            direction = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized;
+            float angle = Random.Range(0f, 360f);
+            direction = new Vector3(Mathf.Cos(angle), 0f, Mathf.Sin(angle)).normalized;
         }
 
-        if (animator != null)
-            animator.SetBool("isWalking", isWalking);
+        animator.SetBool("isWalking", isWalking);
     }
 }
