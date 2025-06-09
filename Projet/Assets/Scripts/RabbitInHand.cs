@@ -10,6 +10,7 @@ public class RabbitInHand : MonoBehaviour
     [SerializeField] Transform deathAttachPoint;
     [SerializeField] private string mouthTag = "Mouth";
     private bool isEaten = false;
+    [SerializeField] private ParticleSystem bloodEffect;
 
 
     private XRGrabInteractable grabbable;
@@ -62,22 +63,45 @@ public class RabbitInHand : MonoBehaviour
     {
         if (isEaten) return;
 
-        if (other.CompareTag(mouthTag))
+        if (other.CompareTag(mouthTag) && rabbitInHand.GetBool("Dead"))
         {
-            EatRabbit();
+            StartCoroutine(EatRabbit());
         }
     }
 
-    public void EatRabbit()
+    public IEnumerator EatRabbit()
     {
-        if (isEaten) return;
+        if (isEaten) yield break;
         isEaten = true;
 
-        rabbitInHand.SetTrigger("Eaten");
+        //rabbitInHand.SetTrigger("Eaten");
+
+        for (int i = 0; i < 3; i++)
+        {
+            if (bloodEffect != null)
+            {
+                bloodEffect.gameObject.SetActive(true);
+                bloodEffect.Play();
+            }
+
+            yield return new WaitForSeconds(0.5f); 
+
+            if (bloodEffect != null)
+            {
+                bloodEffect.gameObject.SetActive(false);
+                bloodEffect.Stop();
+                bloodEffect.Clear();
+            }
+
+            yield return new WaitForSeconds(0.2f); 
+        }
 
         gameObject.SetActive(false);
+        Destroy(gameObject);
+        rabbitInHand.SetBool("inHand", false);
 
         Debug.Log("Lapin mangé à la bouche !");
+
     }
 
 }

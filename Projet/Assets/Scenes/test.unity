@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1767.4573, g: 1882.4886, b: 1965.2053, a: 1}
+  m_IndirectSpecularColor: {r: 1769.0764, g: 1884.1628, b: 1966.9524, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -713,6 +713,7 @@ MonoBehaviour:
   attachPoint: {fileID: 1615326341}
   deathAttachPoint: {fileID: 562918908}
   mouthTag: Mouth
+  bloodEffect: {fileID: 1582021047}
 --- !u!114 &100252667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,6 +960,7 @@ MonoBehaviour:
   attachPoint: {fileID: 518303422}
   deathAttachPoint: {fileID: 1429564688}
   mouthTag: Mouth
+  bloodEffect: {fileID: 1582021047}
 --- !u!114 &152587664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1374,7 +1376,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156972771}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.67733186, y: 0.04828276, z: -0.04463213, w: 0.7327334}
+  m_LocalRotation: {x: 0.67733186, y: 0.048282765, z: -0.04463213, w: 0.7327335}
   m_LocalPosition: {x: -28.404663, y: 46.94076, z: 72.18902}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1422,6 +1424,7 @@ MonoBehaviour:
   attachPoint: {fileID: 443575544}
   deathAttachPoint: {fileID: 1077419049}
   mouthTag: Mouth
+  bloodEffect: {fileID: 1582021047}
 --- !u!114 &191491006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2769,6 +2772,7 @@ MonoBehaviour:
   attachPoint: {fileID: 812562356}
   deathAttachPoint: {fileID: 54809469}
   mouthTag: Mouth
+  bloodEffect: {fileID: 1582021047}
 --- !u!114 &316530914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3143,6 +3147,7 @@ MonoBehaviour:
   attachPoint: {fileID: 284565551}
   deathAttachPoint: {fileID: 1479498532}
   mouthTag: Mouth
+  bloodEffect: {fileID: 1582021047}
 --- !u!114 &334720316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3589,7 +3594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361035161}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7327334, y: -0.04463213, z: -0.04828276, w: -0.67733186}
+  m_LocalRotation: {x: 0.7327334, y: -0.044632133, z: -0.04828276, w: -0.6773319}
   m_LocalPosition: {x: 1235.0734, y: 190.286, z: 448.52637}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3732,11 +3737,11 @@ Transform:
   m_GameObject: {fileID: 381499993}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.768, z: 0.042}
+  m_LocalPosition: {x: -0, y: -0.136, z: -0.0124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1573508654}
+  m_Father: {fileID: 1819489643}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &381499995
 BoxCollider:
@@ -4305,6 +4310,7 @@ MonoBehaviour:
   attachPoint: {fileID: 422738991}
   deathAttachPoint: {fileID: 955056130}
   mouthTag: Mouth
+  bloodEffect: {fileID: 1582021047}
 --- !u!114 &455846466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6135,6 +6141,7 @@ MonoBehaviour:
   attachPoint: {fileID: 1506484094}
   deathAttachPoint: {fileID: 337131890}
   mouthTag: Mouth
+  bloodEffect: {fileID: 1582021047}
 --- !u!114 &737964569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7330,6 +7337,7 @@ MonoBehaviour:
   attachPoint: {fileID: 1399304222}
   deathAttachPoint: {fileID: 1939258295}
   mouthTag: Mouth
+  bloodEffect: {fileID: 1582021047}
 --- !u!114 &864316322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7566,6 +7574,7 @@ MonoBehaviour:
   attachPoint: {fileID: 564178660}
   deathAttachPoint: {fileID: 1542987171}
   mouthTag: Mouth
+  bloodEffect: {fileID: 1582021047}
 --- !u!114 &888329487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8482,6 +8491,7 @@ MonoBehaviour:
   attachPoint: {fileID: 1042289174}
   deathAttachPoint: {fileID: 1884877048}
   mouthTag: Mouth
+  bloodEffect: {fileID: 1582021047}
 --- !u!114 &1048394670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9094,6 +9104,7 @@ MonoBehaviour:
   attachPoint: {fileID: 1874169379}
   deathAttachPoint: {fileID: 253410972}
   mouthTag: Mouth
+  bloodEffect: {fileID: 1582021047}
 --- !u!114 &1214742298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15321,6 +15332,7 @@ MonoBehaviour:
   attachPoint: {fileID: 2130302927}
   deathAttachPoint: {fileID: 1619242167}
   mouthTag: Mouth
+  bloodEffect: {fileID: 1582021047}
 --- !u!114 &1347141747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18157,6 +18169,7 @@ MonoBehaviour:
   attachPoint: {fileID: 1293419893}
   deathAttachPoint: {fileID: 1384412039}
   mouthTag: Mouth
+  bloodEffect: {fileID: 1582021047}
 --- !u!114 &1546759875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18824,8 +18837,6 @@ Transform:
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 381499994}
-  - {fileID: 1582021045}
   - {fileID: 1695055684}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18990,7 +19001,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 2601130423085642144, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  runningSpeed: 6
+  runningSpeed: 8
 --- !u!1 &1582021044
 GameObject:
   m_ObjectHideFlags: 0
@@ -19003,7 +19014,7 @@ GameObject:
   - component: {fileID: 1582021047}
   - component: {fileID: 1582021046}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Blood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19017,13 +19028,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582021044}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.99349153, z: -0, w: -0.11390628}
-  m_LocalPosition: {x: 0.256, y: 0.7679899, z: 1.236}
+  m_LocalRotation: {x: -0.0041276175, y: 0, z: 0, w: 0.9999915}
+  m_LocalPosition: {x: 0, y: 0, z: 0.042}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1573508654}
-  m_LocalEulerAnglesHint: {x: 0, y: 193.081, z: 0}
+  m_Father: {fileID: 1819489643}
+  m_LocalEulerAnglesHint: {x: -0.473, y: 0, z: 0}
 --- !u!199 &1582021046
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -19106,14 +19117,14 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582021044}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 0.3
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -19171,7 +19182,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -19181,7 +19192,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 0.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -19234,7 +19245,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 1.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -19352,7 +19363,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.02
+      scalar: 0.03
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -19729,15 +19740,15 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 5
-    angle: 25
+    type: 4
+    angle: 45
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0.25, y: 0.32, z: 0.74}
+    m_Scale: {x: 0.2, y: 0.2, z: 0.5}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -19935,7 +19946,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -20038,8 +20049,66 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    m_BurstCount: 0
-    m_Bursts: []
+    m_BurstCount: 1
+    m_Bursts:
+    - serializedVersion: 2
+      time: 0
+      countCurve:
+        serializedVersion: 2
+        minMaxState: 0
+        scalar: 5
+        minScalar: 30
+        maxCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        minCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      cycleCount: 0
+      repeatInterval: 0.01
+      probability: 1
   SizeModule:
     enabled: 0
     curve:
@@ -20560,7 +20629,7 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -20613,7 +20682,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 2
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -20666,7 +20735,7 @@ ParticleSystem:
     z:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -20719,7 +20788,7 @@ ParticleSystem:
     orbitalX:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -20772,7 +20841,7 @@ ParticleSystem:
     orbitalY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 2
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -21091,7 +21160,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       scalar: 1
-      minScalar: 1
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -24578,6 +24647,7 @@ MonoBehaviour:
   attachPoint: {fileID: 1784235777}
   deathAttachPoint: {fileID: 81940377}
   mouthTag: Mouth
+  bloodEffect: {fileID: 1582021047}
 --- !u!114 &1714883873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25401,6 +25471,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1582021045}
+  - {fileID: 381499994}
   - {fileID: 2427356}
   m_Father: {fileID: 1695055684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27743,6 +27815,7 @@ MonoBehaviour:
   attachPoint: {fileID: 999247725}
   deathAttachPoint: {fileID: 52032452}
   mouthTag: Mouth
+  bloodEffect: {fileID: 1582021047}
 --- !u!114 &1921111575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29408,6 +29481,7 @@ MonoBehaviour:
   attachPoint: {fileID: 2911724}
   deathAttachPoint: {fileID: 1940659499}
   mouthTag: Mouth
+  bloodEffect: {fileID: 1582021047}
 --- !u!114 &2056936580
 MonoBehaviour:
   m_ObjectHideFlags: 0
