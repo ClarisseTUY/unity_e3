@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1766.24, g: 1881.3367, b: 1964.367, a: 1}
+  m_IndirectSpecularColor: {r: 2245.758, g: 2391.5315, b: 2496.9827, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -712,6 +712,7 @@ MonoBehaviour:
   rabbitInHand: {fileID: 100252670}
   attachPoint: {fileID: 1615326341}
   deathAttachPoint: {fileID: 562918908}
+  mouthTag: Mouth
 --- !u!114 &100252667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -957,6 +958,7 @@ MonoBehaviour:
   rabbitInHand: {fileID: 152587667}
   attachPoint: {fileID: 518303422}
   deathAttachPoint: {fileID: 1429564688}
+  mouthTag: Mouth
 --- !u!114 &152587664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1419,6 +1421,7 @@ MonoBehaviour:
   rabbitInHand: {fileID: 191491009}
   attachPoint: {fileID: 443575544}
   deathAttachPoint: {fileID: 1077419049}
+  mouthTag: Mouth
 --- !u!114 &191491006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2765,6 +2768,7 @@ MonoBehaviour:
   rabbitInHand: {fileID: 316530917}
   attachPoint: {fileID: 812562356}
   deathAttachPoint: {fileID: 54809469}
+  mouthTag: Mouth
 --- !u!114 &316530914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3138,6 +3142,7 @@ MonoBehaviour:
   rabbitInHand: {fileID: 334720319}
   attachPoint: {fileID: 284565551}
   deathAttachPoint: {fileID: 1479498532}
+  mouthTag: Mouth
 --- !u!114 &334720316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3701,6 +3706,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f3369e30fbd31f4bb596b1a99babe83, type: 3}
+--- !u!1 &381499993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 381499994}
+  - component: {fileID: 381499995}
+  m_Layer: 0
+  m_Name: MouthPoint
+  m_TagString: Mouth
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &381499994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381499993}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.768, z: 0.042}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1573508654}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &381499995
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381499993}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.19259249, y: 0.1856562, z: 0.28056145}
+  m_Center: {x: -0.053704277, y: -0.010556401, z: -0.055589847}
 --- !u!1 &383748603
 GameObject:
   m_ObjectHideFlags: 0
@@ -4246,6 +4304,7 @@ MonoBehaviour:
   rabbitInHand: {fileID: 455846469}
   attachPoint: {fileID: 422738991}
   deathAttachPoint: {fileID: 955056130}
+  mouthTag: Mouth
 --- !u!114 &455846466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6075,6 +6134,7 @@ MonoBehaviour:
   rabbitInHand: {fileID: 737964572}
   attachPoint: {fileID: 1506484094}
   deathAttachPoint: {fileID: 337131890}
+  mouthTag: Mouth
 --- !u!114 &737964569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7269,6 +7329,7 @@ MonoBehaviour:
   rabbitInHand: {fileID: 864316320}
   attachPoint: {fileID: 1399304222}
   deathAttachPoint: {fileID: 1939258295}
+  mouthTag: Mouth
 --- !u!114 &864316322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7504,6 +7565,7 @@ MonoBehaviour:
   rabbitInHand: {fileID: 888329490}
   attachPoint: {fileID: 564178660}
   deathAttachPoint: {fileID: 1542987171}
+  mouthTag: Mouth
 --- !u!114 &888329487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8419,6 +8481,7 @@ MonoBehaviour:
   rabbitInHand: {fileID: 1048394673}
   attachPoint: {fileID: 1042289174}
   deathAttachPoint: {fileID: 1884877048}
+  mouthTag: Mouth
 --- !u!114 &1048394670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9030,6 +9093,7 @@ MonoBehaviour:
   rabbitInHand: {fileID: 1214742301}
   attachPoint: {fileID: 1874169379}
   deathAttachPoint: {fileID: 253410972}
+  mouthTag: Mouth
 --- !u!114 &1214742298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15256,6 +15320,7 @@ MonoBehaviour:
   rabbitInHand: {fileID: 1347141750}
   attachPoint: {fileID: 2130302927}
   deathAttachPoint: {fileID: 1619242167}
+  mouthTag: Mouth
 --- !u!114 &1347141747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18091,6 +18156,7 @@ MonoBehaviour:
   rabbitInHand: {fileID: 1546759878}
   attachPoint: {fileID: 1293419893}
   deathAttachPoint: {fileID: 1384412039}
+  mouthTag: Mouth
 --- !u!114 &1546759875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18758,6 +18824,7 @@ Transform:
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 381499994}
   - {fileID: 1695055684}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19679,6 +19746,7 @@ MonoBehaviour:
   rabbitInHand: {fileID: 1714883876}
   attachPoint: {fileID: 1784235777}
   deathAttachPoint: {fileID: 81940377}
+  mouthTag: Mouth
 --- !u!114 &1714883873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22843,6 +22911,7 @@ MonoBehaviour:
   rabbitInHand: {fileID: 1921111578}
   attachPoint: {fileID: 999247725}
   deathAttachPoint: {fileID: 52032452}
+  mouthTag: Mouth
 --- !u!114 &1921111575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24507,6 +24576,7 @@ MonoBehaviour:
   rabbitInHand: {fileID: 2056936583}
   attachPoint: {fileID: 2911724}
   deathAttachPoint: {fileID: 1940659499}
+  mouthTag: Mouth
 --- !u!114 &2056936580
 MonoBehaviour:
   m_ObjectHideFlags: 0

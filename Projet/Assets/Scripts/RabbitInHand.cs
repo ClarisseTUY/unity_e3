@@ -8,6 +8,9 @@ public class RabbitInHand : MonoBehaviour
     [SerializeField] Animator rabbitInHand;
     [SerializeField] Transform attachPoint;
     [SerializeField] Transform deathAttachPoint;
+    [SerializeField] private string mouthTag = "Mouth";
+    private bool isEaten = false;
+
 
     private XRGrabInteractable grabbable;
     private bool isDead = false;
@@ -54,6 +57,27 @@ public class RabbitInHand : MonoBehaviour
     {
         rabbitInHand.SetBool("inHand", false);
         rabbitInHand.SetBool("isWalking", true);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (isEaten) return;
+
+        if (other.CompareTag(mouthTag))
+        {
+            EatRabbit();
+        }
+    }
+
+    public void EatRabbit()
+    {
+        if (isEaten) return;
+        isEaten = true;
+
+        rabbitInHand.SetTrigger("Eaten");
+
+        gameObject.SetActive(false);
+
+        Debug.Log("Lapin mangé à la bouche !");
     }
 
 }
